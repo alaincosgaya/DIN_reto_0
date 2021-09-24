@@ -16,8 +16,8 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 /**
- *
- * @author Idoia
+ * The implementation of the model in the Bd
+ * @author Idoia Ormaetxea
  */
 public class ModelBdImplementation implements ModelInterface {
 
@@ -32,7 +32,10 @@ public class ModelBdImplementation implements ModelInterface {
     private String passwordBD;
     
     private final String consultMessage = "SELECT data FROM message";
-    
+    /**
+     * Get the information to connect to the Db
+     * 
+     */
     public ModelBdImplementation() {
         this.configFile = ResourceBundle.getBundle("model.config");
         this.driverBD = this.configFile.getString("Driver");
@@ -40,7 +43,10 @@ public class ModelBdImplementation implements ModelInterface {
         this.userBD = this.configFile.getString("DBUser");
         this.passwordBD = this.configFile.getString("DBPass");
     }
-    
+    /**
+     * The method that connects with the Db
+     * @throws DaoException 
+     */
     public void conectar() throws DaoException {
         try {
             Class.forName(this.driverBD);
@@ -51,7 +57,10 @@ public class ModelBdImplementation implements ModelInterface {
             throw new DaoException("No se ha encontrado el driver para la conexion" + e1.getMessage());
         }
     }
-
+    /**
+     * The method that disconnects of the Db
+     * @throws DaoException 
+     */
     public void desconectar() throws DaoException {
         try {
             if (stmt != null) {
@@ -64,7 +73,13 @@ public class ModelBdImplementation implements ModelInterface {
             throw new DaoException("Error de SQL " + e.getMessage());
         }
     }
-
+    /**
+     * Get the text from the Db
+     * @return The text that is save in the Db
+     * @throws ConnectException
+     * @throws DaoException
+     * @throws ReadException 
+     */
     @Override
     public String getGreeting() throws ConnectException, DaoException, ReadException {
         String text="";

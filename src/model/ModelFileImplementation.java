@@ -9,11 +9,14 @@ import java.util.ResourceBundle;
 
 
 /**
- *
- * @author Idoia
+ * The implementation of the model in the File
+ * @author Idoia Ormaetxea
  */
 public class ModelFileImplementation implements ModelInterface{
-    
+    /**
+     * Get the text from the File
+     * @return The text that is save in the File
+     */
     @Override
     public String getGreeting() {
         String text;

@@ -8,11 +8,14 @@ package view;
 
 
 /**
- *
- * @author idoia
+ *  This Interface conteins the method that shows the greeting
+ * @author Idoia Ormaetxea
  */
 public interface ViewInterface {
-    //Metodos que van en la implementacion
+    /**
+     * Methods that goes in the implementation
+     * @param message 
+     */
     public void showGreeting(String message);
    
     

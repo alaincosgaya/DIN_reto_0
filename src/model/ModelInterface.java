@@ -8,13 +8,13 @@ package model;
 
 
 /**
- * Esta interfaz contiene el metodo que muestra el saludo.
- * @author idoia
+ * This Interface conteins the method that shows the greeting
+ * @author Idoia Ormaetxea
  */
 public interface ModelInterface {
     /**
-     * Metodos que van en la implementacion
-     * @return El dato que guarda el saludo
+     * Methods that goes in the implementation
+     * @return the greeting
      */
     public String getGreeting()throws Exception;
   

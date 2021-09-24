@@ -1,22 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import model.ModelInterface;
 import view.ViewInterface;
 
 /**
- * El controlador que ejecuta la vista con los datos del modelo
+ * The controller that runs the view  with the data of the model
  * @author 2dam
  */
 public class Controller {
     /**
-     * El metodo que muestra el saludo
-     * @param view La vista que muestra los datos del modelo
-     * @param model Lleva los datos a mostrar
+     * This method shows the greeting
+     * @param view The view that shows the data of the model
+     * @param model Has the data 
      */
     public void run(ViewInterface view, ModelInterface model) throws Exception{
         String data;

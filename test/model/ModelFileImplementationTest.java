@@ -7,11 +7,10 @@ package model;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Ignore;
 
 /**
  *
- * @author 2dam
+ * @author Idoia Ormaetxea
  */
 public class ModelFileImplementationTest {
     

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package application;
 
 import controller.Controller;
@@ -16,16 +11,15 @@ import view.ViewFactory;
 public class Application {
 
     /**
+     * This program saves the data from the factories and create the controller to run the app
      * @param args the command line arguments
+     * 
      */
     public static void main(String[] args) throws Exception {
         ViewFactory view = new ViewFactory();
-        
         ModelFactory model = new ModelFactory();
+        
         Controller controller = new Controller();
-        controller.run(view.getView(),model.getModel());
-        
-        
-    }
-    
+        controller.run(view.getView(),model.getModel());  
+    }  
 }
