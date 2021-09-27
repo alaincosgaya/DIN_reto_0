@@ -17,14 +17,14 @@ public class ModelFactoryTest {
     @Test
     public void testGetModelFile() {
         ModelFactory testFileModelFactory = new ModelFactory();  
-        assertNotNull(testFileModelFactory.getModel() instanceof ModelFileImplementation);
+        assertTrue(testFileModelFactory.getModel() instanceof ModelFileImplementation);
        
     }
     
     @Test
     public void testGetModelBd() {
         ModelFactory testBdModelFactory = new ModelFactory();
-        assertNotNull(testBdModelFactory.getModel() instanceof ModelBdImplementation);
+        assertTrue(testBdModelFactory.getModel() instanceof ModelBdImplementation);
     }
     
 }

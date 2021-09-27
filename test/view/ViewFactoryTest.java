@@ -17,20 +17,20 @@ public class ViewFactoryTest {
     @Test
     public void testGetViewText() {
         ViewFactory testTextViewFactory = new ViewFactory();  
-        assertNotNull(testTextViewFactory.getView()instanceof ViewTextImplementation);
+        assertTrue(testTextViewFactory.getView()instanceof ViewTextImplementation);
        
     }
     
     @Test
     public void testGetViewSwing() {
         ViewFactory testSwingViewFactory = new ViewFactory();
-        assertNotNull(testSwingViewFactory.getView() instanceof ViewSwingImplementation);
+        assertTrue(testSwingViewFactory.getView() instanceof ViewSwingImplementation);
     }
     
     @Test
     public void testGetViewFx() {
         ViewFactory testFxViewFactory = new ViewFactory();
-        assertNotNull(testFxViewFactory.getView() instanceof ViewFxImplementation);
+        assertTrue(testFxViewFactory.getView() instanceof ViewFxImplementation);
     }
     
     
