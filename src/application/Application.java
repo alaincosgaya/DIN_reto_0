@@ -1,10 +1,8 @@
 package application;
 
 import controller.Controller;
-import static javafx.application.Application.launch;
 import model.ModelFactory;
 import view.ViewFactory;
-import view.ViewFxImplementation;
 
 /**
  * Is the main class

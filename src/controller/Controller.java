@@ -5,7 +5,7 @@ import view.ViewInterface;
 
 /**
  * The controller that runs the view  with the data of the model
- * @author 2dam
+ * @author Idoia Ormaetxea
  */
 public class Controller {
     /**

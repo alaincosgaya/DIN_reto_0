@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author 2dam
+ * @author Alain Cosgaya
  */
 public class ModelFactoryTest {
     
