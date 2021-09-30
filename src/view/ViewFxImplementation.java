@@ -7,42 +7,47 @@ package view;
 
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
- *
- * @author 2dam
+ * Shows the View Implementation with JavaFx
+ * @author Idoia Ormaetxea
  */
 public class ViewFxImplementation extends Application implements ViewInterface{
+    private static String msg = "";
     private Alert alert;
-    
+    /**
+     * The method that creates the view
+     * @param primaryStage 
+     */
     @Override
     public void start(Stage primaryStage) {
          
-        alert = new Alert(Alert.AlertType.NONE);
-        alert.setTitle("Greeting");
+        Label lb = new Label(msg);
+        Pane root = new Pane();
+        root.getChildren().add(lb);
         
-        alert.setHeaderText(null);
-        alert.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);
-        alert.showAndWait();
+        Scene scene = new Scene(root, 300, 250);
+        
+        primaryStage.setTitle("Greeting");
+        primaryStage.setScene(scene);
+        primaryStage.show();
        
         
     }
 
-    
+    /**
+     * The method that launches the View and inserts the message
+     * @param message 
+     */
     @Override
     public void showGreeting(String message) {
-        String[] data = new String[1];
-        data[0]=message;
-        launch(data);
+        msg = message;
+        launch(new String[1]);
         
         
     }
