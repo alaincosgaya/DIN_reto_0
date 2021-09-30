@@ -14,7 +14,7 @@ public class Controller {
      * @param model Has the data 
      */
     public void run(ViewInterface view, ModelInterface model) throws Exception{
-        String data;
+        String data; 
         data = model.getGreeting();
         view.showGreeting(data);
     }
