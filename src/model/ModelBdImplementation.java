@@ -6,7 +6,6 @@
 package model;
 
 import exception.*;
-import java.net.ConnectException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -76,19 +75,18 @@ public class ModelBdImplementation implements ModelInterface {
     /**
      * Get the text from the Db
      * @return The text that is save in the Db
-     * @throws ConnectException
      * @throws DaoException
      * @throws ReadException 
      */
     @Override
-    public String getGreeting() throws ConnectException, DaoException, ReadException {
+    public String getGreeting() throws DaoException, ReadException {
         String text="";
         
         ResultSet rs = null;
         try {
             this.conectar();
         } catch (DaoException e1) {
-            throw new ConnectException(e1.getMessage());
+            throw new DaoException(e1.getMessage());
         }
         try {
             stmt = con.prepareStatement(consultMessage);

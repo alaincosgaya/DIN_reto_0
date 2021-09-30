@@ -1,4 +1,4 @@
-/*
- * This is the package containing classes and interfaces for logic tier.
+/**
+ * This is the package containing the classes to execute the Application.
  */
 package controller;

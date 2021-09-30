@@ -23,7 +23,7 @@ public class ModelBdImplementationTest {
         String greeting;
         
         ModelBdImplementation TestModelBd = new ModelBdImplementation(); 
-        greeting = "Hola muy buenas.";
+        greeting = "Hola muy buenas, soy la BD.";
         
         assertEquals(greeting, TestModelBd.getGreeting());
     }

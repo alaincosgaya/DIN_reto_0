@@ -20,7 +20,7 @@ public class ModelFileImplementationTest {
         String greeting;
         
         ModelFileImplementation testModelFile = new ModelFileImplementation(); 
-        greeting = "Hola muy buenas.";
+        greeting = "Hola muy buenas, soy el texto.";
         
         assertEquals(greeting, testModelFile.getGreeting());
         
